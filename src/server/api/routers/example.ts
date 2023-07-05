@@ -39,7 +39,7 @@ export const exampleRouter = createTRPCRouter({
 
   // update user
   updateUser: publicProcedure.input(userUpdateSchema).mutation(({input, ctx})=>{
-    const {id, ...data} = userUpdateSchema.parse(input)
+    // const {id, ...data} = userUpdateSchema.parse(input)
     return ctx.prisma.user.update({
       where: {
         id: input.id.toString(),

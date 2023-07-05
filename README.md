@@ -26,3 +26,20 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+## checkout creating migrations on prisma
+https://www.prisma.io/docs/concepts/components/prisma-migrate
+
+create a new migration
+`npx prisma migrate dev --name init`
+
+init is the name of the migration
+
+dev is the name of the stage
+
+
+## checkout prisma studio
+https://www.prisma.io/docs/concepts/components/prisma-studio
+
+start prisma studio with `npx prisma studio`
+
