@@ -2,7 +2,7 @@ import { useState } from "react";
 import { api } from "Y/utils/api";
 import { set } from "zod";
 
-export const runtime = 'edge'
+export const runtime = 'experimental-edge'
 
 export default function Home() {
   

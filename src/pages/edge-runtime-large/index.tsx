@@ -5,7 +5,7 @@ import '@radix-ui/themes/styles.css';
 import BadgeComponent from './BadgeComponent';
 import CardComponent from './CardComponent';
 
-export const runtime = 'edge'
+export const runtime = 'experimental-edge'
 
 const index = () => {
   return (
