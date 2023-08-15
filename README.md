@@ -30,7 +30,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 ## checkout creating migrations on prisma
 https://www.prisma.io/docs/concepts/components/prisma-migrate
 
-create a new migration
+create and run a new migration
 `npx prisma migrate dev --name init`
 
 init is the name of the migration
@@ -43,3 +43,6 @@ https://www.prisma.io/docs/concepts/components/prisma-studio
 
 start prisma studio with `npx prisma studio`
 
+## run migrations
+
+`npx prisma migrate dev --name init --preview-feature`
