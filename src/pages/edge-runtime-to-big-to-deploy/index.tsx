@@ -3,7 +3,7 @@ import React from 'react'
 import { AspectRatio, Theme } from '@radix-ui/themes'
 import '@radix-ui/themes/styles.css';
 
-export const runtime = 'edge'
+export const runtime = 'experimental-edge'
 
 const index = () => {
   return (
