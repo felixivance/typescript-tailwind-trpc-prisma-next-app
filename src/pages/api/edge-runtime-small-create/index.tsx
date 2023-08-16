@@ -4,7 +4,7 @@
 import React from 'react'
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export const runtime = 'experimental-edge'
+// export const runtime = 'experimental-edge'
 
 
 
