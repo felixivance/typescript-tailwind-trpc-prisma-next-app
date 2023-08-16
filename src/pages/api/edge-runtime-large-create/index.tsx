@@ -1,16 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/consistent-type-imports */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import React from 'react'
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from "next";
 
-// not working
-// export const runtime = 'experimental-edge'
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const data = await response.json();
 
-// this fails with edge runtime :https://github.com/vercel/next.js/issues/46128
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.json({ message: 'Hi, this is a response from the API!' });
-  // new Response(res, 200, { message: 'Hi, this is a response from the edge runtime too big to deploy!' });
+    res.status(200).json(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
 }
-
